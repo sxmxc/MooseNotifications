@@ -7,6 +7,6 @@
 For more detailed information, see [Installing plugins](https://docs.godotengine.org/en/latest/tutorials/plugins/editor/installing_plugins.html)
 
 # Getting Started
-After installation, MooseNotifications automatically adds a 'Notifications' global to your autoloads. To use, simply access it anywhere in your scripts with either `Notifications.add_message("message")` or `Notifications.add_alert("alert")`
+After installation, MooseNotifications automatically adds a `Notifications` global to your autoloads. To use, simply access it anywhere in your scripts with either `Notifications.add_message("message")` or `Notifications.add_alert("alert")`
 
 See `Example.tscn` and `Example.gd` in the repository for examples. Supports BBCode.
