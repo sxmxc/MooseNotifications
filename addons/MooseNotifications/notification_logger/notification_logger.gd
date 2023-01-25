@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-const logitem2_proto := preload("res://addons/MooseNotifications/notification_logger/notification_item.tscn")
+const logitem_proto := preload("res://addons/MooseNotifications/notification_logger/notification_item.tscn")
 
 const MAX_LOGS = 10
 
@@ -22,7 +22,7 @@ func _ready():
 	$AreaIndicator.queue_free()
 
 func add_message(bbcode:String):
-	bbcode = "[color=green][Message][/color] " + bbcode
+	bbcode = "[color=green][Message][/color] %s" % bbcode
 	#refresh fade timer
 	timer.stop(); timer.play()
 	#see the new log if can be combined with previous one
@@ -37,7 +37,7 @@ func add_message(bbcode:String):
 			get_child(0).queue_free()
 		if get_tree():
 			await get_tree().process_frame
-			var new_node = logitem2_proto.instantiate()
+			var new_node = logitem_proto.instantiate()
 			add_child(new_node)
 			new_node.content_label.text = bbcode
 			new_node.amount_panel.hide()

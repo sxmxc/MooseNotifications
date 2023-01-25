@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-const alertitem2_proto := preload("res://addons/MooseNotifications/notification_alerts/notification_alert_item.tscn")
+const alertitem_proto := preload("res://addons/MooseNotifications/notification_alerts/notification_alert_item.tscn")
 
 const MAX_LOGS = 10
 
@@ -22,6 +22,7 @@ func _ready():
 	$AreaIndicator.queue_free()
 
 func add_alert(bbcode:String):
+	bbcode = "[color=Red][Alert][/color] %s" % bbcode
 	#refresh fade timer
 	timer.stop(); timer.play()
 	#see the new log if can be combined with previous one
@@ -36,7 +37,7 @@ func add_alert(bbcode:String):
 			get_child(0).queue_free()
 		if get_tree():
 			await get_tree().process_frame
-			var new_node = alertitem2_proto.instantiate()
+			var new_node = alertitem_proto.instantiate()
 			add_child(new_node)
 			new_node.content_label.text = bbcode
 			new_node.amount_panel.hide()
