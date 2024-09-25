@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddo8ntyw6v3wm"]
 
-[ext_resource type="Script" path="res://addons/MooseNotifications/notification_alerts/notification_alerts.gd" id="1_vmkaf"]
+[ext_resource type="Script" path="res://addons/moose_notifications/notification_alerts/notification_alerts.gd" id="1_vmkaf"]
 
 [node name="NotificationAlerts" type="VBoxContainer"]
 anchors_preset = 8

@@ -4,7 +4,7 @@ extends EditorPlugin
 #When enable this plugin, it will add a singleton to Autoload
 func _enter_tree():
 	# Initialization of the plugin goes here.
-	add_autoload_singleton("Notifications", "res://addons/MooseNotifications/Notifications.tscn")
+	add_autoload_singleton("Notifications", "res://addons/moose_notifications/notifications.tscn")
 	print("MooseNotifications was initialized!")
 	print("Project page: https://github.com/sxmxc/MooseNotifications")
 

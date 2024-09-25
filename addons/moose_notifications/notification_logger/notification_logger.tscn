@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d38ybsqlkbvbs"]
 
-[ext_resource type="Script" path="res://addons/MooseNotifications/notification_logger/notification_logger.gd" id="1_vvymb"]
+[ext_resource type="Script" path="res://addons/moose_notifications/notification_logger/notification_logger.gd" id="1_vvymb"]
 
 [node name="NotificationLogger" type="VBoxContainer"]
 offset_top = 150.0

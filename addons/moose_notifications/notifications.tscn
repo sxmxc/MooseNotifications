@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv8vq3iq65r65"]
+
+[ext_resource type="Script" path="res://addons/moose_notifications/notifications.gd" id="1_40uil"]
+[ext_resource type="PackedScene" uid="uid://d38ybsqlkbvbs" path="res://addons/moose_notifications/notification_logger/notification_logger.tscn" id="2_tfreo"]
+[ext_resource type="PackedScene" uid="uid://ddo8ntyw6v3wm" path="res://addons/moose_notifications/notification_alerts/notification_alerts.tscn" id="3_tkwuf"]
+
+[node name="Notifications" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_40uil")
+
+[node name="NotificationLogger" parent="." instance=ExtResource("2_tfreo")]
+offset_top = 43.0
+offset_right = 151.0
+offset_bottom = 271.0
+
+[node name="NotificationAlerts" parent="." instance=ExtResource("3_tkwuf")]
+anchors_preset = 10
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 41.0
+grow_vertical = 1
